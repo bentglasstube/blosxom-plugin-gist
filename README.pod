@@ -1,0 +1,49 @@
+=head1 NAME
+
+gist - A blosxom plugin for linking to gists
+
+=head1 SYNOPSIS
+
+In your blosxom stories, you can link to a gist with the C<< <gist> >>
+tag as follows:
+
+  Here is some cool code I wrote:
+  
+  <gist id="2845477">
+
+You can link to a specific file by including the file attribute:
+
+  <gist id="2845477" file="pwm.sh">
+
+=head1 INSTALLATION
+
+Just copy C<lib/gist.pm> to your blosxom plugins folder.  Make sure that you
+rename it to just C<gist> as blosxom will not load it otherwise.
+
+=head1 CONFIGURATION
+
+There are two configuration options available.
+
+=over 4
+
+=item B<TAG_NAME>
+
+This lets you change the tag name that is searched to something besides
+C<< <gist> >> if you so choose.
+
+=item B<INCLUDE_NOSCRIPT>
+
+This lets you control wether or not a C<< <noscript> >> tag is generated
+with a simple link to the gist.  This is very useful for including your
+posts in RSS as not all RSS readers will run javascript embedded in
+feeds (in particular Google Reader will not).
+
+=back
+
+=head1 AUTHOR
+
+Alan Berndt <alan@eatabrick.org>
+
+=head1 LICENSE
+
+See the LICENSE file for license details.
